@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*space ships from intro instructions*/
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+
+
+.juego {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.thead {
+    background-image: url("./img/intercambiator\(1\).gif");
+    background-size: cover;
+}
+
+
+.goal {
+    background-image: url("./img/intercambiator\(1\).gif");
+    background-size: cover
+}
+
+.collision1 {
+    background-color: transparent;
+}
+
+#safespace {
+    background-image: url("./img/zonaSeguranebulosa1.png");
+    background-size: cover;
+}
+
+.collision2 {
+    background-color: transparent;
+}
+
+.home {
+    background-color: transparent;
+    background-size: cover;
+}
+
+#puerta {
+    background-image: url("./img/blackhole.gif");
+    background-size: cover;
+}
+
+tr {
+    background-color: transparent;
+}
+
+td {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+}
+
+.spaceSupporter {
+    background-image: url("./img/cometawapo2.png");
+}
+
+.allien {
+    background-image: url("./img/alienpiskel.gif");
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+.spaceShip {
+    background-image: url("./img/piedraschulas.png");
+    background-size: cover;
+}
+
+.blackhole {
+    background-image: url("./img/portal.gif");
+}
+
+.starter {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./img/fondopantalla.gif");
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+}
+
+.game-wrapper {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/fondopantalla.gif");
+    background-size: cover;
+}
+
+
+/* S T A R T  B U T T O N */
+
+.start-button {
+    border-radius: 4px;
+    background-color: #b943a5c7;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    padding: 16px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(186, 0, 192, 0.7);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 70px;
+
+}
+
+.start-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #d8c6db, #dbade3, #dd99e9, #da5af0, #d8c6db, #dbade3, #dd99e9, #da5af0, #d8c6db);
+    background-size: 900%;
+    border-radius: 10px;
+    filter: blur(10px);
+    animation: glowing 30s linear infinite;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start-button:after {
+    content: '✰';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start-button:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.start-button:hover:after {
+    opacity: 1;
+    right: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game-over {
+    background-image: url("./img/game-over.gif");
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.you-win {
+    background-image: url("./img/winer.jpg");
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    z-index: 9;
+
+}
+
+.off {
+    display: none;
+}
+
+.instrucciones {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: transparent;
+    color: white;
+    text-shadow: 2px 2px #da5af0;
+    text-align: center;
+
+}
+
+legend {
+    padding-top: 15px;
+}
+
+p {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#theway {
+    text-decoration: underline white;
+}
+
+fieldset {
+    border: 0 none;
+    padding: 15px;
+    text-align: center;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 800% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* C O U N T D O W N   T I M E R */
+
+
+#timer {
+    display: flex;
+    align-self: flex-star;
+    background-color: #000000;
+    font-weight: bold;
+    font-size: x-large;
+    color: #fff;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 10px;
+    height: 5%;
+    width: 780px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+}
+
+#timer:before {
+    display: flex;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #d8c6db, #dbade3, #dd99e9, #da5af0, #d8c6db, #dbade3, #dd99e9, #da5af0, #d8c6db);
+    background-size: 900%;
+    border-radius: 10px;
+    filter: blur(10px);
+    animation: glowing 90s linear infinite;
+}
+
+/* M U T E  B U T T O N */
+
+.mute {
+    display: flex;
+    align-self: flex-start;
+    background-color: transparent;
+    font-weight: bold;
+    color: #ffffff;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 10px;
+    width: 50px;
+    justify-content: center;
+    border: none;
+}
+
+.mute:hover {
+    border: 3px solid #da5af0;
+    border-radius: 10px;
+}
+
